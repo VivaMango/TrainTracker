@@ -72,6 +72,7 @@ function rowGenerator (name , destination , start , rate) {
     var dataArray = [name , destination , start , rate]
     var thData = $("<th>")
     thData.attr("scope" , "row")
+    thData.text("X")
     dataArray.forEach(function(element) {
         var newData = $("<td>")
         newData.text(element)
@@ -86,3 +87,14 @@ function rowGenerator (name , destination , start , rate) {
     newRow.prepend(thData)
     $("#tableBody").append(newRow)
 }
+
+var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+  }
+
+    console.log(hours + ":" + minutes , "currentTime")
+    $("#currentTime").text(hours + ":" + minutes)

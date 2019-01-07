@@ -24,6 +24,7 @@
     <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4"><img src="assets/images/traintrackerlogo.png" alt="ttlogo">Welcome to the TrainTracker!</h1> 
+                <h2 id=timeContainer>The Current Time is <span id=currentTime></span></h2>
                 <form class="inputForm">
                     <input id="nameInput" type="text" name="nameInput"></input>
                     <input id="destinationInput" type="text" name="destinationInput"></input>
@@ -41,6 +42,7 @@
                 <table class="table">
                         <thead class="thead-dark">
                           <tr>
+                            <th scope="col">X</th>
                             <th scope="col">Name</th>
                             <th scope="col">Destination</th>
                             <th scope="col">First Train</th>
